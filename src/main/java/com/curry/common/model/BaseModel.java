@@ -10,6 +10,8 @@ import java.time.LocalDateTime;
  * @since 2022-10-24
  */
 public class BaseModel<T extends Serializable> implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     /**
      * 数据主键ID，一般建议为数据库自增，且类型为数字类型
      */
