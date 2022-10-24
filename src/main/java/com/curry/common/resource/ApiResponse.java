@@ -29,6 +29,14 @@ public class ApiResponse<T extends Serializable> implements Serializable {
         return ok(null, result);
     }
 
+    public static <T extends Serializable> ApiResponse<T> ok() {
+        return ok(null, null);
+    }
+
+    public static <T extends Serializable> ApiResponse<T> okNoReturn(String msg) {
+        return ok(msg, null);
+    }
+
     public static <T extends Serializable> ApiResponse<T> ok(String msg, T result) {
         return new ApiResponse<>(0, msg, result);
     }
